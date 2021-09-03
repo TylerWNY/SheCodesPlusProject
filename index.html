@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>SheCodesWk5HW</title>
+    <meta charset="UTF-8" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link href="src/styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+        <form class="container-fluid" id="search-bar">
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search City Name or Zip Code"
+              id="search-bar-input"
+            />
+          </div>
+        </form>
+      </nav>
+      
+      <h1>
+        Please Enter a City in the Searchbar Above To Begin
+      </h1>
+      <div class="d-grid gap-2 col-6 mx-auto">
+          <button class="btn btn-primary" type="button" href="#" id = "current-location-search">Click Here To Search By Current Location Instead</button>
+          
+        </div>
+        <div class="row">
+        <div class="col-12">
+          <div class="card" style="width: 18rem;">
+            <img
+              src="src/images/Thunderstorm.jpg"
+              class="card-img-top"
+              alt="Thunderstorm at Night"
+            />
+            <div class="card-body">
+              <h5 class="card-title" id="card-title">
+                Today's Weather
+              </h5>
+              <p class="card-text">
+                <span id="today-temp"> 76℉/69℉</span> |
+                <a href="#" id="today-temp-C">°C</a> |
+                <a href="#" id="today-temp-F">°F</a>
+                <div id = "today-precipitation"> 88% Precipitation </div>
+                <div id = "today-wind-speed"> Wind S 10mph </div>
+                <div id = "today-humidity"> Humidity 81% </div>
+              </p>
+              <a
+                href="https://weather.com/weather/today/l/96f2f84af9a5f5d452eb0574d4e4d8a840c71b05e22264ebdc0056433a642c84"
+                class="btn btn-primary"
+                target="_blank"
+                >See More Info</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <div class="card t+1" style="width: 18rem;">
+            <img
+              src="src/images/Sunny.jpg"
+              class="card-img-top"
+              alt="Sunny Day"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                Tomorrow <br />
+                July 30
+              </h5>
+              <p class="card-text">
+                80℉/59℉ <br />
+                Sunny <br />
+                9% Precipitation <br />
+                Wind NW 14 mph
+              </p>
+              <a href="#" class="btn btn-primary">More Info</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="card t+2" style="width: 18rem;">
+            <img
+              src="src/images/Partly-Cloudy.jpg"
+              class="card-img-top"
+              alt="Sunny Day"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                Sunday <br />
+                August 1
+              </h5>
+              <p class="card-text">
+                80℉/66℉ <br />
+                Partly Cloudy <br />
+                24% Precipitation <br />
+                Wind SSW 6 mph
+              </p>
+              <a href="#" class="btn btn-primary">More Info</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <div class="card t+3" style="width: 18rem;">
+            <img
+              src="src/images/Sunny-sky.jpg"
+              class="card-img-top"
+              alt="Sunny Day"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                Moday <br />
+                August 2
+              </h5>
+              <p class="card-text">
+                82℉/67℉ <br />
+                Mostly sunny <br />
+                14% Precipitation <br />
+                Wind NW 6 mph
+              </p>
+              <a href="#" class="btn btn-primary">More Info</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="card t+4" style="width: 18rem;">
+            <img
+              src="src/images/Overcast-Trees.jpg"
+              class="card-img-top"
+              alt="Sunny Day"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                Tuesday <br />
+                August 3
+              </h5>
+              <p class="card-text">
+                75℉/67℉ <br />
+                Cloudy <br />
+                24% Precipitation <br />
+                Wind ENE 5 mph
+              </p>
+              <a href="#" class="btn btn-primary">More Info</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <div class="card t+5" style="width: 18rem;">
+            <img
+              src="src/images/Partly-Cloudy.jpg"
+              class="card-img-top"
+              alt="Sunny Day"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                Wednesday <br />
+                August 4
+              </h5>
+              <p class="card-text">
+                81℉/68℉ <br />
+                Partly Cloudy <br />
+                24% Precipitation <br />
+                Wind E 6 mph
+              </p>
+              <a href="#" class="btn btn-primary">More Info</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="card t+6" style="width: 18rem;">
+            <img
+              src="src/images/Sunny-sky.jpg"
+              class="card-img-top"
+              alt="Sunny Day"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                Thursday <br />
+                August 5
+              </h5>
+              <p class="card-text">
+                80℉/68℉ <br />
+                Partly Cloudy <br />
+                24% Precipitation <br />
+                Wind E 6 mph
+              </p>
+              <a href="#" class="btn btn-primary">More Info</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"
+      ></script>
+      <script src="src/index.js"></script>
+    </div>
+  </body>
+</html>
